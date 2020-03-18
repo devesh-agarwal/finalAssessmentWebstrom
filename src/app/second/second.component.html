@@ -1,0 +1,35 @@
+<input type="text" [(ngModel)]="uname">
+{{uname}}
+<div class =con>
+   <button class="aaa" (click)="on()">namebutton</button>
+<div *ngIf="de;  else ed" >block has been created</div>
+<ng-template #ed>
+    <div>not created</div>
+</ng-template>
+</div>
+
+<BR><BR><BR><BR><BR>
+<div class =con>
+    <button  (click)="on()">namebutton</button>
+ <div *ngIf="de; then thenblock  else ed" ></div>
+ <ng-template #thenblock>block has been created</ng-template>
+ <ng-template #ed>not created</ng-template>
+ 
+<div>
+    <select class="formcontorl" (change)="onemethoh($event)">
+        <option value="select" > select</option>
+        <option value="laptop" > lapi</option>
+    <option value="t1v1"> tv</option>
+    <option value="m1"> mobile</option>
+    <option value="w1m1"> wm</option>
+    </select>
+</div>
+<div [ngSwitch]=selected>
+    <h1 class ="text" *ngSwitchCase="'lapi'">laptop</h1>
+    <h1 class ="text" *ngSwitchCase="'tv'">tv</h1  >
+    <h1 class ="text" *ngSwitchCase="'m'">m</h1>
+    <h1  class ="text" *ngSwitchCase="'wm'">wm</h1>
+   
+</div>
+<h2>{{a}}</h2>
+</div>

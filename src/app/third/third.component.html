@@ -1,0 +1,30 @@
+<table class=" table"></table>
+<thead>
+    <tr>
+        <td>product name  </td><br>
+
+        <td> product id  </td>
+        <td> product price</td>
+    </tr>
+</thead>
+<tbody *ngFor=" let pro of p">
+    <tr >
+        <td>{{pro.name}}</td>
+        <td>{{pro.id}}</td>
+        <td><input type="text" value="{{d}}">{{d}}</td>
+    </tr>
+</tbody>
+<br><br><br><br><br>
+<input type="text" #uname placeholder="usname">
+<button (click)="oncreate(uname)  ">create user</button>
+<table class="one">
+    <thead>
+        <th>username</th>
+        <th>remove</th>
+    </thead>
+    <tbody *ngFor="let un of user  index as i">
+        <td>{{un.name}}</td>
+        <button class="btn btn-danger" (click)="rmove(i)">remove</button>
+    </tbody>
+</table>
+<app-second></app-second>

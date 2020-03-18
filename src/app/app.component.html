@@ -1,0 +1,15 @@
+<!--
+<h1>Hi there </h1>
+
+
+    <li routerLink="/">first </li>
+    <li routerLink="/second">second </li>
+    <li routerLink="/third">third </li>
+
+
+<router-outlet></router-outlet>-->
+<h1>Your Emoji</h1>
+<div *ngIf="selectedEmoji">{{ selectedEmoji }}</div>
+<button mat-raised-button (click)="openEmojiDialog()">
+  Make a selection
+</button>
